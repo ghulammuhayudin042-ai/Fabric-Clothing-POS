@@ -1,0 +1,11 @@
+# Render blueprint: one web service runs the Node server AND serves the React app.
+services:
+  - type: web
+    name: fabric-pos
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm run seed && npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "22"

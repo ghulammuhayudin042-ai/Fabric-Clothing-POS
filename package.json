@@ -1,0 +1,16 @@
+{
+  "name": "fabric-pos",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node --no-warnings src/server.js",
+    "seed": "node --no-warnings src/seed.js",
+    "restore": "node scripts/restore.js",
+    "test": "node --test --test-force-exit test/core.test.js test/api.test.js test/extra.test.js",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "dev:client": "npm --prefix client run dev"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
